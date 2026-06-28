@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ODISka Discord Bot</title>
     <style>
-        /* 1. Definice fontů */
+        /* Definice fontů */
         @font-face {
             font-family: 'MatrixItalic';
             src: url('fonts/DotMatrix-Italic.otf') format('opentype');
         }
         @font-face {
             font-family: 'MatrixExpanded';
-            src: url('fonts/DotMatrix-ExpandedItalic.ttf') format('truetype');
+            src: url('fonts/DotMatrix-ExpandedItalic.otf') format('opentype');
         }
 
         body {
             background-color: #1a1a1a;
-            color: #FF9900; /* Barva displeje */
+            color: #FF9900;
             font-family: sans-serif;
             display: flex;
             justify-content: center;
@@ -31,10 +31,9 @@
             padding: 40px;
             border: 2px solid #333;
             text-align: center;
-            max-width: 500px;
+            max-width: 600px; /* Trochu širší, aby se text vešel */
         }
 
-        /* Aplikace fontu Italic */
         h1, .features li {
             font-family: 'MatrixItalic', sans-serif;
             text-transform: uppercase;
@@ -56,37 +55,43 @@
             letter-spacing: 1px;
         }
 
-        /* Tlačítko - Aplikace fontu ExpandedItalic */
-        .btn-add {
+        /* Obdélníkový panel pro tlačítko */
+        .btn-panel {
             font-family: 'MatrixExpanded', sans-serif;
-            background-color: #FF9900;
-            color: black;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 28px;
             display: inline-block;
+            border: 3px solid #FF9900; /* Oranžový rám jako displej */
+            background-color: transparent;
+            color: #FF9900;
+            padding: 20px 40px;
+            text-decoration: none;
+            font-size: 26px;
             margin-top: 20px;
             transition: 0.3s;
+            text-transform: uppercase;
         }
 
-        .btn-add:hover { background-color: #cc7a00; }
+        .btn-panel:hover {
+            background-color: #FF9900; /* Převrácení barev při najetí */
+            color: #000000;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>LINKA BOT</h1>
+        <h1>ODISka Discord Bot</h1>
         
         <ul class="features">
-            <li>> Vyhledávání spojeni v ODIS</li>
+            <li>> Vyhledavani spoju v ODIS</li>
             <li>> Ban, kick, mute</li>
             <li>> Leaderboard</li>
             <li>> Starboard</li>
-            <li>> Rank systém (automatické role)</li>
+            <li>> Rank system (automaticke role)</li>
         </ul>
 
-        <a href="https://discord.com/oauth2/authorize?client_id=1520851384961077470&permissions=8&integration_type=0&scope=applications.commands+bot" class="btn-add">
-            DEJ SI HO NA SERVER
+        <a href="https://discord.com/oauth2/authorize?client_id=1520851384961077470" class="btn-panel">
+            DOVEZ HO NA VLASTNI SERVER
         </a>
     </div>
 
